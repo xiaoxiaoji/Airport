@@ -15,6 +15,7 @@
 		1F55DB381C92B05100B12119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F55DB361C92B05100B12119 /* LaunchScreen.storyboard */; };
 		1F55DB431C92B05100B12119 /* AirportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F55DB421C92B05100B12119 /* AirportTests.m */; };
 		1F55DB4E1C92B05100B12119 /* AirportUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F55DB4D1C92B05100B12119 /* AirportUITests.m */; };
+		1F55DB5C1C92B15500B12119 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F55DB5B1C92B15500B12119 /* EstimoteSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1F55DB491C92B05100B12119 /* AirportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F55DB4D1C92B05100B12119 /* AirportUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirportUITests.m; sourceTree = "<group>"; };
 		1F55DB4F1C92B05100B12119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F55DB5B1C92B15500B12119 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EstimoteSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F55DB5C1C92B15500B12119 /* EstimoteSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 		1F55DB1C1C92B05100B12119 = {
 			isa = PBXGroup;
 			children = (
+				1F55DB5B1C92B15500B12119 /* EstimoteSDK.framework */,
 				1F55DB271C92B05100B12119 /* Airport */,
 				1F55DB411C92B05100B12119 /* AirportTests */,
 				1F55DB4C1C92B05100B12119 /* AirportUITests */,
@@ -207,6 +211,7 @@
 				TargetAttributes = {
 					1F55DB241C92B05100B12119 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 7L85G8LZ5R;
 					};
 					1F55DB3D1C92B05100B12119 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -413,10 +418,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Airport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.happiestminds..Airport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -424,10 +436,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Airport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.happiestminds..Airport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
